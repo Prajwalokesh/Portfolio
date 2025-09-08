@@ -1,0 +1,298 @@
+import { HackathonCard } from "@/components/hackathon-card";
+import BlurFade from "@/components/magicui/blur-fade";
+import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { ProjectCard } from "@/components/project-card";
+import { ResumeCard } from "@/components/resume-card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { DATA } from "@/data/resume";
+import AvatarVideo from "@/components/avatar-video";
+import Link from "next/link";
+import Markdown from "react-markdown";
+import type { Metadata } from "next";
+import CallToAction from "@/components/CallToAction";
+import { cn } from "@/lib/utils";
+
+const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+  title: `${DATA.name} - Portfolio`,
+  description: DATA.summary,
+};
+
+export default function Page() {
+  return (
+    <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <section id="hero" aria-label="Introduction">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
+          <div className="gap-2 flex justify-between">
+            <div className="flex-col flex flex-1 space-y-1.5">
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                yOffset={8}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+              />
+              <h1 className="sr-only">
+                {DATA.name} - {DATA.description}
+              </h1>
+              <BlurFadeText
+                className="max-w-[600px] md:text-xl"
+                delay={BLUR_FADE_DELAY}
+                text={DATA.description}
+              />
+            </div>
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <div className="md:hidden">
+                <Avatar className="size-28 border overflow-hidden">
+                  <AvatarImage
+                    alt={`${DATA.name}'s profile picture`}
+                    src={"/dp.png"}
+                    className="object-top"
+                  />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
+              <div className="hidden md:block">
+                {DATA.avatarVideoSrc ? (
+                  <div className="size-24 overflow-hidden rounded-full border bg-black">
+                    <AvatarVideo
+                      src={DATA.avatarVideoSrc}
+                      poster={DATA.avatarPosterUrl}
+                      className="h-[112px] w-[112px] relative  bottom-2 object-cover object-top pointer-events-none"
+                    />
+                  </div>
+                ) : DATA.avatarEmbedSrc ? (
+                  <div className="size-30 overflow-hidden rounded-full border">
+                    <iframe
+                      src={DATA.avatarEmbedSrc}
+                      width="100"
+                      height="100"
+                      style={{
+                        height: "112px",
+                        width: "112px",
+                        aspectRatio: "1 / 1",
+                        objectPosition: "top",
+                      }}
+                      allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                      allowFullScreen
+                      frameBorder={0}
+                    />
+                  </div>
+                ) : (
+                  <Avatar className="size-28 border overflow-hidden">
+                    <AvatarImage
+                      alt={`${DATA.name}'s profile picture`}
+                      src={DATA.avatarUrl}
+                      className="object-top"
+                    />
+                    <AvatarFallback>{DATA.initials}</AvatarFallback>
+                  </Avatar>
+                )}
+              </div>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+      <section id="about" aria-label="About">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <h2 className="text-xl font-bold">About</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {DATA.summary}
+          </Markdown>
+        </BlurFade>
+      </section>
+      <section id="education" aria-label="Education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="work" aria-label="Work Experience">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          {DATA.work.map((work, id) => (
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={work.company}
+                logoUrl={work.logoUrl}
+                altText={work.company}
+                title={work.company}
+                subtitle={work.title}
+                href={work.href}
+                badges={work.badges}
+                period={`${work.start} - ${work.end}`}
+                description={work.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      <section id="skills" aria-label="Skills">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-1">
+            {DATA.skills.map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge key={skill}>{skill}</Badge>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="projects" aria-label="Projects">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  My Projects
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Check out my latest work
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I&apos;ve worked on a variety of projects, from simple
+                  websites to complex web applications. Here are a few of my
+                  favorites.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.projects.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+              >
+                <ProjectCard
+                  href={project.href}
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
+              </BlurFade>
+            ))}
+           <BlurFade
+                delay={BLUR_FADE_DELAY * 12 + DATA.projects.length * 0.05}
+                className={cn(
+                  "min-h-[200px]",
+                  DATA.projects.length % 2 === 0 ? "sm:col-span-2" : ""
+                )}
+              >
+                <div className="h-full flex items-center justify-center p-8 rounded-lg border border-dashed border-muted-foreground/50">
+                  <p className="text-xl font-semibold text-muted-foreground/80">
+                    More Cooking...
+                  </p>
+                </div>
+              </BlurFade>
+          </div>
+        </div>
+      </section>
+      <section id="hackathons" aria-label="Milestones">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Milestones
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  I like building things
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Through my projects, I learned a lot.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              {DATA.Milestones.map((project, id) => (
+                //@ts-ignore
+                <BlurFade
+                  //@ts-ignore
+                  key={project.title + project.dates}
+                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                >
+                  <HackathonCard
+                    //@ts-ignore
+                    title={project.title}
+                    //@ts-ignore
+                    description={project.description}
+                    //@ts-ignore
+                    location={project.location}
+                    //@ts-ignore
+                    dates={project.dates}
+                    //@ts-ignore
+                    image={project.image}
+                    //@ts-ignore
+                    links={project.links}
+                  />
+                </BlurFade>
+              ))}
+            </ul>
+          </BlurFade>
+        </div>
+      </section>
+      <CallToAction></CallToAction>
+      <section id="contact" aria-label="Contact">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-3">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Contact
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Get in Touch
+              </h2>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Want to chat? Just shoot me a dm{" "}
+                <Link
+                  href={DATA.contact.social.X.url}
+                  className="text-blue-500 hover:underline"
+                  rel="noopener noreferrer"
+                >
+                  with a direct question on twitter
+                </Link>{" "}
+                and I&apos;ll respond whenever I can. I will ignore all
+                soliciting.
+              </p>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+    </main>
+  );
+}
