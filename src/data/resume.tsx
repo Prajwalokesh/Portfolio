@@ -305,7 +305,7 @@ export const DATA = {
       title: "Infothon 3.0",
       dates: "July ,2024",
       description:
-        "National level hackathon where our team secured a top 10 spot among the top 15 by building a volunteer management service platform.",
+        "National level hackathon where our team secured a top 10 spot  by building a volunteer management service platform.",
       location: "VVCE,Mysuru",
       image: "",
       links: [
