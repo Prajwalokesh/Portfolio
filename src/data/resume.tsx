@@ -89,56 +89,27 @@ export const DATA = {
       active: true,
       description:
         "Individuals with dietary restrictions, such as diabetes, hypertension, or severe allergies, often struggle to make safe and healthy food choices. Our project leverages Artificial Intelligence (AI)—using Convolutional Neural Networks (CNN) for food image recognition and Large Language Models (LLM) for reasoning—to provide real-time, personalized food recommendations. By simply scanning a meal, users can receive tailored suggestions, ensuring safer and healthier eating habits."],
-      image: "/moveit.png",
+      image: "/WhatsApp Image 2025-11-20 at 8.50.12 PM.jpeg",
       video: "/",
     },
     {
-      title: "Campus Admin",
-      href: "https://github.com/Vaibhav-Kumar-K-R/CampusAdmin",
-      dates: "April, 2025",
+      title: "Mentor-Connect",
+      href: "https://github.com/Prajwalokesh/Mentor-Connect",
+      dates: "July, 2025",
       active: true,
       description:
-        "A comprehensive ERP system for educational institutions to manage student records, attendance, and academic performance with date-driven insights.",
-      technologies: [
-        "React.js",
-        "TailwindCSS",
-        "MongoDB",
-        "JavaScript",
-        "Express.js",
-        "Nodemailer",
-        "Radix UI"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://erpcampusadmin.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/campus.png",
+        "MentorConnect is a digital platform that simplifies academic tracking, mentoring, and communication between students, faculty, and parents. It replaces manual processes with a centralized system for submitting academic details, monitoring progress, and triggering timely interventions. With features like automated alerts, dashboards, and parent integration, MentorConnect makes mentoring more transparent, efficient, and effective.",
+      image: "/chat.png",
       video: "/",
     },
+      
      {
-      title: "Chat Rooms",
-      href: "https://github.com/Vaibhav-Kumar-K-R/Live-Chat-app",
+      title: "Krishi-Mitra",
+      href: "https://github.com/Prajwalokesh/Krishi-Mitra",
       dates: "July 2025",
       active: true,
       description:
-        "A real-time chat application using Socket.IO and Node.js with multiple chat rooms that alows users to join different rooms and communicate seamlessly.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Tailwind CSS",
-        "Socket.IO",
-        "Node.js"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://chatroomslive.netlify.app/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+        "Kisan Mitra aims to solve these problems through a unified platform that leverages technology to bridge the gap between farmers, buyers, agricultural experts, and service providers.",
       image: "/chat.png",
       video: "/",
     },
