@@ -31,7 +31,7 @@ const CallToAction = () => {
       </motion.p>
       <motion.div className="flex justify-center w-full">
         <a 
-          href="https://www.linkedin.com/in/sankalpnad003"
+          href="https://www.linkedin.com/in/prajwal-l-b0b5a9258/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-foreground text-background px-6 py-3 rounded-lg font-medium pointer-events-auto hover:bg-background hover:text-foreground hover:border-2 hover:border-foreground transition-all duration-200"
