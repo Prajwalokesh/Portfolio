@@ -3,18 +3,18 @@ import { url } from "inspector";
 import { HomeIcon, icons, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Vaibhav Kumar",
-  initials: "K R",
+  name: "Prajwal",
+  initials: "L",
   location: "India",
   description: "Engineering elegant solutions to complex problems",
   summary:
-    "I'm a Computer Science student with  a passion for building scalable tech solutions. My expertise spans full-stack development, system design, and cloud infrastructure. Through hands-on projects and hackathons, I've developed proficiency in building robust applications.",
+    "I'm a Computer Science student with  a passion for building scalable tech solutions. My expertise spans full-stack development, Through hands-on projects and hackathons, I've developed proficiency in building robust applications.",
   avatarUrl:
     "/dp.png",
   avatarEmbedSrc:
     "",
   avatarVideoSrc:
-    "/dp.png",
+    "",
   avatarPosterUrl: "/dp.png",
   skills: [
     "C/C++",
