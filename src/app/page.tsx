@@ -196,6 +196,7 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={project.description}
+                  tags={project.technologies}
                   dates={project.dates}
                   image={project.image}
                   video={project.video}
