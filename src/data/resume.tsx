@@ -54,7 +54,7 @@ export const DATA = {
     },
   },
 
-  // ✅ ADDED THIS (important for fixing the Vercel error)
+  // ✅ FIXED — added logoUrl, href, badges so Vercel compiles
   work: [
     {
       company: "Student Developer",
@@ -63,6 +63,9 @@ export const DATA = {
       end: "Present",
       description:
         "Building personal projects, participating in hackathons, and learning full-stack development.",
+      logoUrl: "/work.png", // you can change this
+      href: "",
+      badges: [],
     },
   ],
 
@@ -126,7 +129,6 @@ export const DATA = {
     },
   ],
 
-  // ✅ FIXED MILESTONES BLOCK — properly moved outside projects[]
   milestones: [
     {
       title: "Shaastra's Industri AI Hackathon 2025",
