@@ -110,120 +110,26 @@ export const DATA = {
       active: true,
       description:
         "Kisan Mitra aims to solve these problems through a unified platform that leverages technology to bridge the gap between farmers, buyers, agricultural experts, and service providers.",
-      image: "/chat.png",
+      image: "krishi.png",
       video: "/",
     },
-    {
-      title: "Saas Landing Page",
-      href: "https://github.com/Vaibhav-Kumar-K-R/Saas-landing-page",
-      dates: "October, 2024",
-      active: true,
-      description:
-        "A high-converting landign page for a SaaS platform with responsive design and intuitive UI  designed to engage user experience. ",
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Framer Motion"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "http://reactsaas.netlify.app/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/saas.png",
-      video: "",
-    },
-    {
-      title: "Algo Sorts",
-      href: "https://github.com/Vaibhav-Kumar-K-R/sort-visualiser",
-      dates: "July 2025",
-      active: true,
-      description:
-        "A web-based sorting algorithm visualizer that demystifies how classic sorting methods like Bubble Sort,Merge Sort and other sorting algorithms work through real-time, dynamic visualizations.",
-      technologies: [
-        "HTML",
-        "CSS",
-        "Javascript",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://sort-visualiser12.netlify.app/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/sort.png",
-      video: "/",
-    },
-   
-    {
-      title: "My Wallet",
-      href: "https://github.com/Vaibhav-Kumar-K-R/blockchain-wallet-app",
-      dates: "July 2025",
-      active: true,
-      description:
-        "A web-based interface for maning etherum and solana wallets where users can efficiently create,add,track and view wallet details",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "Tailwind CSS",
-        "Radix UI",
-        "Solana-web3.js"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "http://blockchain-wallet-app.vercel.app/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/wallet.png",
-      video: "/",
-    },
-    
-    
-    {
-      title: "Gemini Text Extractor",
-      href: "https://github.com/Vaibhav-Kumar-K-R/Gemini-Text-Extractor",
-      dates: "July 2025",
-      active: true,
-      description:
-        "An image-text extractor that can extract all text content from a given image if it exists.Just a wrapper on top of google generative ai 😜",
-      technologies: [
-        "Next.js",
-        "Google Generative AI",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://image-text-extractor-bfu7.vercel.app/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/text.png",
-      video: "/",
-    },
-  ],
   Milestones: [
     {
-      title: "Infothon 3.0",
-      dates: "July ,2024",
+      title: "Shaastra's Industri AI Hackathon 2025",
+      dates: "Jan ,2025",
       description:
-        "National level hackathon where our team secured a top 10 spot  by building a volunteer management service platform.",
-      location: "VVCE,Mysuru",
+        " Participated in the IndustriAI Hackathon at IIT Madras, out of 700 participating teams.",
+      location: "IIT Madras , Chennai",
       image: "",
       links: [
         
       ],
     },
     {
-      title: "Hackfest DSU",
+      title: "Idea Forge by SJCE-Step",
       dates: "June, 2025",
-      description: "Developed a web based application for medical health tracking and doctor consultation based on the data obtained from smart watch via the Google fit API.",
-      location: "DSU Main Campus,Bangalore",
+      description: " Participated in Idea Forge event conducted by SJCE-STEP, where we secured a Top 10 spot out of 80 teams.",
+      location: "SJCE , Mysuru",
       image: " ",
       links: [
         
