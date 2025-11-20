@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CallToAction = () => {
   const handleViewResume = () => {
-    window.open('https://drive.google.com/file/d/16mK8pH5m6s2HhYeLToixFdUYbNrgicjY/view?usp=drive_link', '_blank');
+    window.open('https://drive.google.com/file/d/13qfFuGF3i9TyQMaUWGDM1Klwjp2jl-AL/view?usp=drive_link', '_blank');
   };
 
   const handleDownloadResume = () => {
