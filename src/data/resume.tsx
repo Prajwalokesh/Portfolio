@@ -1,6 +1,5 @@
 import { Icons } from "@/components/icons";
-import { url } from "inspector";
-import { HomeIcon, icons, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Prajwal",
@@ -8,14 +7,12 @@ export const DATA = {
   location: "India",
   description: "Engineering elegant solutions to complex problems",
   summary:
-    "I'm a Computer Science student with  a passion for building scalable tech solutions. My expertise spans full-stack development, Through hands-on projects and hackathons, I've developed proficiency in building robust applications.",
-  avatarUrl:
-    "/praj.jfif",
-  avatarEmbedSrc:
-    "",
-  avatarVideoSrc:
-    "",
+    "I'm a Computer Science student with a passion for building scalable tech solutions. My expertise spans full-stack development. Through hands-on projects and hackathons, I've developed proficiency in building robust applications.",
+  avatarUrl: "/praj.jfif",
+  avatarEmbedSrc: "",
+  avatarVideoSrc: "",
   avatarPosterUrl: "/praj.jfif",
+
   skills: [
     "C/C++",
     "Java",
@@ -29,7 +26,9 @@ export const DATA = {
     "MySQL",
     "Git & Github",
   ],
+
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+
   contact: {
     email: "prajwallokesh012345@gmail.com",
     tel: "9901792261",
@@ -54,6 +53,7 @@ export const DATA = {
       },
     },
   },
+
   education: [
     {
       school: "Sri Jayachamarajendra College of Engineering , Mysuru",
@@ -63,11 +63,10 @@ export const DATA = {
       start: "2022",
       end: "2026",
     },
-    
     {
-      school: "Gopalswamy independent PU college (SANKALPA) , Mysuru",
+      school: "Gopalswamy Independent PU College (SANKALPA) , Mysuru",
       href: "",
-      degree: "Pre-university college",
+      degree: "Pre-university College",
       logoUrl: "Gopal.webp",
       start: "2020",
       end: "2022",
@@ -81,6 +80,7 @@ export const DATA = {
       end: "2020",
     },
   ],
+
   projects: [
     {
       title: "Personalized-Food-Recommendation",
@@ -88,7 +88,7 @@ export const DATA = {
       dates: "June, 2025",
       active: true,
       description:
-        "Individuals with dietary restrictions, such as diabetes, hypertension, or severe allergies, often struggle to make safe and healthy food choices. Our project leverages Artificial Intelligence (AI)—using Convolutional Neural Networks (CNN) for food image recognition and Large Language Models (LLM) for reasoning—to provide real-time, personalized food recommendations. By simply scanning a meal, users can receive tailored suggestions, ensuring safer and healthier eating habits.",
+        "Individuals with dietary restrictions often struggle to make safe and healthy food choices. This project uses CNNs for food recognition and LLMs for intelligent reasoning to provide real-time dietary recommendations.",
       image: "/WhatsApp Image 2025-11-20 at 8.50.12 PM.jpeg",
       video: "/",
     },
@@ -98,43 +98,40 @@ export const DATA = {
       dates: "July, 2025",
       active: true,
       description:
-        "MentorConnect is a digital platform that simplifies academic tracking, mentoring, and communication between students, faculty, and parents. It replaces manual processes with a centralized system for submitting academic details, monitoring progress, and triggering timely interventions. With features like automated alerts, dashboards, and parent integration, MentorConnect makes mentoring more transparent, efficient, and effective.",
+        "A digital platform that simplifies academic tracking, mentoring, and communication between students, faculty, and parents with dashboards, automated alerts, and progress monitoring.",
       image: "/mentor.jpeg",
       video: "/",
     },
-      
-     {
+    {
       title: "Krishi-Mitra",
       href: "https://github.com/Prajwalokesh/Krishi-Mitra",
       dates: "July 2025",
       active: true,
       description:
-        "Kisan Mitra aims to solve these problems through a unified platform that leverages technology to bridge the gap between farmers, buyers, agricultural experts, and service providers.",
+        "A unified platform that bridges the gap between farmers, buyers, experts, and service providers using technology and smart tools.",
       image: "krishi.png",
       video: "/",
     },
-  Milestones: [
+  ],
+
+  milestones: [
     {
       title: "Shaastra's Industri AI Hackathon 2025",
-      dates: "Jan ,2025",
+      dates: "Jan, 2025",
       description:
-        " Participated in the IndustriAI Hackathon at IIT Madras, out of 700 participating teams.",
-      location: "IIT Madras , Chennai",
+        "Participated in the IndustriAI Hackathon at IIT Madras among 700+ teams.",
+      location: "IIT Madras, Chennai",
       image: "",
-      links: [
-        
-      ],
+      links: [],
     },
     {
-      title: "Idea Forge by SJCE-Step",
+      title: "Idea Forge by SJCE-STEP",
       dates: "June, 2025",
-      description: " Participated in Idea Forge event conducted by SJCE-STEP, where we secured a Top 10 spot out of 80 teams.",
-      location: "SJCE , Mysuru",
-      image: " ",
-      links: [
-        
-      ],
+      description:
+        "Secured Top 10 position out of 80 teams at Idea Forge event conducted by SJCE-STEP.",
+      location: "SJCE, Mysuru",
+      image: "",
+      links: [],
     },
-
   ],
 } as const;
