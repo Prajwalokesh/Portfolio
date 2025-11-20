@@ -99,7 +99,7 @@ export const DATA = {
       active: true,
       description:
         "MentorConnect is a digital platform that simplifies academic tracking, mentoring, and communication between students, faculty, and parents. It replaces manual processes with a centralized system for submitting academic details, monitoring progress, and triggering timely interventions. With features like automated alerts, dashboards, and parent integration, MentorConnect makes mentoring more transparent, efficient, and effective.",
-      image: "/chat.png",
+      image: "/mentor.jpeg",
       video: "/",
     },
       
