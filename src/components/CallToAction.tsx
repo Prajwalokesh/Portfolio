@@ -8,8 +8,8 @@ const CallToAction = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/16mK8pH5m6s2HhYeLToixFdUYbNrgicjY/export?format=pdf'; 
-    link.download = 'Resume_Vaibhav.pdf';
+    link.href = 'https://drive.google.com/file/d/13qfFuGF3i9TyQMaUWGDM1Klwjp2jl-AL/view?usp=drive_link; 
+    link.download = 'Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
