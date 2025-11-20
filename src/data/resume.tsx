@@ -97,37 +97,44 @@ export const DATA = {
   ],
 
   projects: [
-    {
-      title: "Personalized-Food-Recommendation",
-      href: "https://github.com/Prajwalokesh/Personalized-Food-Recommendation",
-      dates: "June, 2025",
-      active: true,
-      description:
-        "Individuals with dietary restrictions often struggle to make safe food choices. This project uses CNN for image recognition and LLM for reasoning to provide real-time personalized food recommendations.",
-      image: "/WhatsApp Image 2025-11-20 at 8.50.12 PM.jpeg",
-      video: "/",
-    },
-    {
-      title: "Mentor-Connect",
-      href: "https://github.com/Prajwalokesh/Mentor-Connect",
-      dates: "July, 2025",
-      active: true,
-      description:
-        "MentorConnect is a platform that simplifies academic tracking and mentoring with automated alerts, dashboards, and parent integration.",
-      image: "/mentor.jpeg",
-      video: "/",
-    },
-    {
-      title: "Krishi-Mitra",
-      href: "https://github.com/Prajwalokesh/Krishi-Mitra",
-      dates: "July 2025",
-      active: true,
-      description:
-        "Kisan Mitra is a unified platform leveraging technology to bridge the gap between farmers, buyers, experts, and service providers.",
-      image: "krishi.png",
-      video: "/",
-    },
-  ],
+  {
+    title: "Personalized-Food-Recommendation",
+    href: "https://github.com/Prajwalokesh/Personalized-Food-Recommendation",
+    dates: "June, 2025",
+    active: true,
+    description:
+      "Individuals with dietary restrictions often struggle to make safe food choices. This project uses CNN for image recognition and LLM for reasoning to provide real-time personalized food recommendations.",
+    image: "/WhatsApp Image 2025-11-20 at 8.50.12 PM.jpeg",
+    video: "/",
+    technologies: ["Python", "TensorFlow", "CNN", "LLM", "Flask"],
+    links: [],
+  },
+  {
+    title: "Mentor-Connect",
+    href: "https://github.com/Prajwalokesh/Mentor-Connect",
+    dates: "July, 2025",
+    active: true,
+    description:
+      "MentorConnect is a platform that simplifies academic tracking and mentoring with automated alerts, dashboards, and parent integration.",
+    image: "/mentor.jpeg",
+    video: "/",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    links: [],
+  },
+  {
+    title: "Krishi-Mitra",
+    href: "https://github.com/Prajwalokesh/Krishi-Mitra",
+    dates: "July 2025",
+    active: true,
+    description:
+      "Kisan Mitra is a unified platform leveraging technology to bridge the gap between farmers, buyers, experts, and service providers.",
+    image: "krishi.png",
+    video: "/",
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind"],
+    links: [],
+  },
+],
+
 
   milestones: [
     {
