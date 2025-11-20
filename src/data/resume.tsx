@@ -88,7 +88,7 @@ export const DATA = {
       dates: "June, 2025",
       active: true,
       description:
-        "Individuals with dietary restrictions, such as diabetes, hypertension, or severe allergies, often struggle to make safe and healthy food choices. Our project leverages Artificial Intelligence (AI)—using Convolutional Neural Networks (CNN) for food image recognition and Large Language Models (LLM) for reasoning—to provide real-time, personalized food recommendations. By simply scanning a meal, users can receive tailored suggestions, ensuring safer and healthier eating habits."],
+        "Individuals with dietary restrictions, such as diabetes, hypertension, or severe allergies, often struggle to make safe and healthy food choices. Our project leverages Artificial Intelligence (AI)—using Convolutional Neural Networks (CNN) for food image recognition and Large Language Models (LLM) for reasoning—to provide real-time, personalized food recommendations. By simply scanning a meal, users can receive tailored suggestions, ensuring safer and healthier eating habits.",
       image: "/WhatsApp Image 2025-11-20 at 8.50.12 PM.jpeg",
       video: "/",
     },
